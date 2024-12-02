@@ -1,0 +1,157 @@
+/* Menu Page Styling */
+.menu-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #c2e21f;
+    color: #fff;
+}
+
+.menu-title {
+    font-size: 2.5em;
+    color: #ff4081;
+    animation: popIn 1s ease-out forwards;
+}
+
+.menu-nav ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.menu-nav a {
+    color: #fff;
+    font-size: 1.5em;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 5px;
+    display: inline-block;
+    border: 2px solid transparent;
+    transition: color 0.3s, border 0.3s;
+}
+
+.menu-nav a:hover {
+    color: #ff4081;
+    border: 2px solid #ff4081;
+    animation: bounce 0.5s ease;
+}
+
+/* Pop-in Animation for Menu Title */
+@keyframes popIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Bounce Animation for Menu Links */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.section {
+    padding: 50px;
+    text-align: center;
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+/* Back to Menu Link */
+.back-to-menu {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px;
+    text-decoration: none;
+    color: #ff4081;
+    border: 1px solid #ff4081;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.back-to-menu:hover {
+    background-color: #ff4081;
+    color: #fff;
+}
+
+/* Fade-in Animation */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1.5s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Rotate-in Animation */
+.rotate-in {
+    opacity: 0;
+    transform: rotate(-180deg);
+    animation: rotateIn 1s ease-out forwards;
+}
+
+@keyframes rotateIn {
+    to {
+        opacity: 1;
+        transform: rotate(0deg);
+    }
+}
+
+/* Zoom-in Animation */
+.zoom-in {
+    opacity: 0;
+    transform: scale(0.5);
+    animation: zoomIn 1s forwards;
+}
+
+@keyframes zoomIn {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Slide-up Animation */
+.slide-up {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: slideUp 1s forwards;
+}
+
+@keyframes slideUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Visibility styling for scroll-triggered sections */
+.section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
