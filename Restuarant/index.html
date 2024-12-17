@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Table Booking</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Restaurant Table Booking</h1>
+        </header>
+        
+        <section id="booking-section">
+            <h2>Book Your Table</h2>
+            <form id="booking-form">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Your Email" required>
+                <input type="text" id="phone" placeholder="Your Phone Number" required>
+                <select id="table-selection" required>
+                    <option value="">Select a Table</option>
+                </select>
+                <input type="number" id="people-count" placeholder="Number of People" required min="1">
+                <input type="date" id="booking-date" required>
+                <input type="time" id="booking-time" required>
+                <button type="submit">Book Table</button>
+            </form>
+        </section>
+
+        <section id="tables-available">
+            <h2>Available Tables</h2>
+            <ul id="tables-list"></ul>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
